@@ -1,3 +1,5 @@
 const feetConverter = (length) => length * 12;
 
-module.exports = {feetConverter}
+const inchConverter = (length) => length / 12 ;
+
+module.exports = {feetConverter , inchConverter}
