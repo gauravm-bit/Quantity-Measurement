@@ -1,4 +1,5 @@
-const Converter = require('../app/Converter.js')
+const Converter = require('../app/Length.js')
+const Volume = require('../app/Volume')
 const assert = require('chai').assert;
 
 //1.1 when compared with 0 feet as input and 0 inch as output should return equal
@@ -121,6 +122,11 @@ it('given input of 2 inch and 2.5 cm when added should return 3 inch', () => {
     var length2 = Converter.centimenterToInchConverter(2.5)
     var result = Converter.additionLength(length1, length2)
     assert.equal(result, 3)
+})
+
+//1.23 when compared with 1 gallon water and 3.78 liters should return equal
+it('given input of 1 gallon water and 3.78 litres should return equal', () => {
+    assert.equal(Volume.gallonToLitreConverter(1), Volume.returnSame(3.78))
 })
 
 
