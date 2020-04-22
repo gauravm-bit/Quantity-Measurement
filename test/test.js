@@ -91,9 +91,36 @@ it('given input of 1 yard and 3 feet should return equal values of inch', () => 
     assert.equal(Converter.yardToInchConverter(1), Converter.feetToInchConverter(3))
 })
 
-//1.19 when compared with 2 inch and 5 cm when converted should return 
-it('given input of 2 inch and 5 cm should return equal', () => {
-    assert.equal(Converter.inchToCentimeterConverter(2), Converter.returnSame(5))
+//1.19 when added with 2 inch and 2 inch when compared whould return 4 
+it('given input of 2 inch and 2 inch when added should return 4', () => {
+    var length1 = Converter.returnSame(2)
+    var length2 = Converter.returnSame(2)
+    var result = Converter.additionLength(length1, length2)
+    assert.equal(result, 4)
+})
+
+//1.20 when added with 1 feet and 2 inch when compared whould return 14 inch
+it('given input of 1 feet and 2 inch when added should return 14 inch', () => {
+    var length1 = Converter.feetToInchConverter(1)
+    var length2 = Converter.returnSame(2)
+    var result = Converter.additionLength(length1, length2)
+    assert.equal(result, 14)
+})
+
+//1.21 when added with 1 feet and 1 feet when compared whould return 24 inch
+it('given input of 1 feet and 1 feet when added should return 24 inch', () => {
+    var length1 = Converter.feetToInchConverter(1)
+    var length2 = Converter.feetToInchConverter(1)
+    var result = Converter.additionLength(length1, length2)
+    assert.equal(result, 24)
+})
+
+//1.22 when added with 2 inch and 2.5 cm when compared whould return 3 inch
+it('given input of 2 inch and 2.5 cm when added should return 3 inch', () => {
+    var length1 = Converter.returnSame(2)
+    var length2 = Converter.centimenterToInchConverter(2.5)
+    var result = Converter.additionLength(length1, length2)
+    assert.equal(result, 3)
 })
 
 
