@@ -7,5 +7,10 @@ class ConverterFactory
      yardToInchConverter = (length) => length * 36;
 
      returnSame = (length) => length;
+
+     inchToCentimeterConverter = (length) =>  Math.floor(length * 2.54);
+
+     additionLength = (length1, length2) => length1 + length2;
+    
 }
 module.exports = new ConverterFactory;
