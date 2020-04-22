@@ -91,6 +91,11 @@ it('given input of 1 yard and 3 feet should return equal values of inch', () => 
     assert.equal(Converter.yardToInchConverter(1), Converter.feetToInchConverter(3))
 })
 
+//1.19 when compared with 2 inch and 5 cm when converted should return 
+it('given input of 2 inch and 5 cm should return equal', () => {
+    assert.equal(Converter.inchToCentimeterConverter(2), Converter.returnSame(5))
+})
+
 
 
 
