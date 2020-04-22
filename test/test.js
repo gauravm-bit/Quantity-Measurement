@@ -1,5 +1,6 @@
 const Converter = require('../app/Length.js')
 const Volume = require('../app/Volume')
+const Mass = require('../app/Mass')
 const assert = require('chai').assert;
 
 //1.1 when compared with 0 feet as input and 0 inch as output should return equal
@@ -142,7 +143,7 @@ it('given input of 1 gallon water and 3.78 litre should return 7.56 litres', () 
     assert.equal(result, 7.56)
 })
 
-//1.25 when added with 1 litre water and 1000 ml should return 2 litres 
+//1.26 when added with 1 litre water and 1000 ml should return 2 litres 
 it('given input of 1 litre water and 1000 ml should return 2 litres', () => {
     var volume1 = Volume.returnSame(1)
     var volume2 = Volume.millilitretoLitreConverter(1000)
@@ -150,6 +151,23 @@ it('given input of 1 litre water and 1000 ml should return 2 litres', () => {
     assert.equal(result, 2)
 })
 
+//1.27 when compared with 1 kg masss and 1000 grams should return equal
+it('given input of 1 kg mass and 1000 grams should return equal', () => {
+    assert.equal(Mass.KilogramToGramConverter(1), Mass.returnSame(1000))
+})
+
+//1.28 when compared with 1 tonne masss and 1000 kgs should return equal
+it('given input of 1 tonne mass and 1000 kgs should return equal', () => {
+    assert.equal(Mass.tonneToKgConverter(1), Mass.returnSame(1000))
+})
+
+//1.26 when added with 1 tonne mass and 1000 grams should return 1001 kgs 
+it('given input of 1 tonne mass and 1000 grams should return 1001 kgs', () => {
+    var Mass1 = Mass.tonneToKgConverter(1)
+    var Mass2 = Mass.gramToKgsConverter(1000)
+    var result = Mass.additionMass(Mass1, Mass2)
+    assert.equal(result, 1001)
+})
 
 
 
