@@ -99,6 +99,13 @@ it('given input of 2 inch and 2 inch when added should return 4', () => {
     assert.equal(result, 4)
 })
 
+//1.20 when added with 1 feet and 2 inch when compared whould return 14 inch
+it('given input of 1 feet and 2 inch when added should return 14 inch', () => {
+    var length1 = Converter.feetToInchConverter(1)
+    var length2 = Converter.returnSame(2)
+    var result = Converter.additionLength(length1, length2)
+    assert.equal(result, 14)
+})
 
 
 
