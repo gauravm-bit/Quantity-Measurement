@@ -10,6 +10,8 @@ class ConverterFactory
 
      inchToCentimeterConverter = (length) =>  Math.floor(length * 2.54);
 
+     centimenterToInchConverter = (length) => Math.ceil(length / 2.54);
+
      additionLength = (length1, length2) => length1 + length2;
     
 }

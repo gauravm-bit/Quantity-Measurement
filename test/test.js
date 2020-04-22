@@ -107,6 +107,25 @@ it('given input of 1 feet and 2 inch when added should return 14 inch', () => {
     assert.equal(result, 14)
 })
 
+//1.21 when added with 1 feet and 1 feet when compared whould return 24 inch
+it('given input of 1 feet and 1 feet when added should return 24 inch', () => {
+    var length1 = Converter.feetToInchConverter(1)
+    var length2 = Converter.feetToInchConverter(1)
+    var result = Converter.additionLength(length1, length2)
+    assert.equal(result, 24)
+})
+
+//1.22 when added with 2 inch and 2.5 cm when compared whould return 3 inch
+it('given input of 2 inch and 2.5 cm when added should return 3 inch', () => {
+    var length1 = Converter.returnSame(2)
+    var length2 = Converter.centimenterToInchConverter(2.5)
+    var result = Converter.additionLength(length1, length2)
+    assert.equal(result, 3)
+})
+
+
+
+
 
 
 
