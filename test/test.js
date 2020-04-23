@@ -1,5 +1,6 @@
 const Converter = require('../app/Length.js')
 const Volume = require('../app/Volume')
+const Temperature = require('../app/Temperature')
 const Mass = require('../app/Mass')
 const assert = require('chai').assert;
 
@@ -161,13 +162,19 @@ it('given input of 1 tonne mass and 1000 kgs should return equal', () => {
     assert.equal(Mass.tonneToKgConverter(1), Mass.returnSame(1000))
 })
 
-//1.26 when added with 1 tonne mass and 1000 grams should return 1001 kgs 
+//1.29 when added with 1 tonne mass and 1000 grams should return 1001 kgs 
 it('given input of 1 tonne mass and 1000 grams should return 1001 kgs', () => {
     var Mass1 = Mass.tonneToKgConverter(1)
     var Mass2 = Mass.gramToKgsConverter(1000)
     var result = Mass.additionMass(Mass1, Mass2)
     assert.equal(result, 1001)
 })
+
+//1.30 when compared with 212Farhaniet and 100 degree celcius should return equal
+it('given input of 212 Farhaniet and 100 degree celcius should return equal', () => {
+    assert.equal(Temperature.farhanietToCelciusConverter(212), Temperature.returnSame(100))
+})
+ 
 
 
 
