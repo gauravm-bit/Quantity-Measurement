@@ -1,13 +1,24 @@
 class VolumeFactory
 {
-    gallonToLitreConverter = (volume) => (volume * 3.78);
+    gallonToLitreConverter = (volume) => {
+        let result = (volume * 3.78);
+        return result
+    }
 
-    litreToMilliLitreConverter = (volume) => (volume * 1000);
+    litreToMilliLitreConverter = (volume) => {
+        let result = (volume * 1000);
+        return result
+    }
 
-    millilitretoLitreConverter = (volume) => (volume / 1000);
-    
+    millilitretoLitreConverter = (volume) => {
+        let result = (volume / 1000);
+        return result
+    }
     returnSame = (volume) => volume;
 
-    additionVolume = (volume1, volume2) => volume1 + volume2;
+    additionVolume = (volume1, volume2) => {
+        let result = volume1 + volume2;
+        return result
+}
 }
 module.exports = new VolumeFactory;

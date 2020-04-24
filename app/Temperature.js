@@ -1,7 +1,10 @@
 class TemperatureFactory
 {
 
-    farhanietToCelciusConverter = (temperature) => (temperature - 32) * 5/9;
+    farhanietToCelciusConverter = (temperature) => {
+        let result = (temperature - 32) * 5/9;
+        return result;
+    }
 
     returnSame = (temperature) => temperature;
 

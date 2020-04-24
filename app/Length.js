@@ -1,18 +1,35 @@
 class LengthFacotry
 {
-     feetToInchConverter = (length) => length * 12;
+     feetToInchConverter = (length) => {
+          let result = length * 12;
+          return result
+     }
 
-     inchToFeetConverter = (length) => length / 12;
+     inchToFeetConverter = (length) => {
+          let result = length / 12;
+          return result
+     }
 
-     yardToInchConverter = (length) => length * 36;
+     yardToInchConverter = (length) => {
+          let result = length * 36;
+          return result
+     }
 
      returnSame = (length) => length;
 
-     inchToCentimeterConverter = (length) =>  Math.floor(length * 2.54);
+     inchToCentimeterConverter = (length) => {
+          let result = Math.floor(length * 2.54);
+          return result
+     }
 
-     centimenterToInchConverter = (length) => Math.ceil(length / 2.54);
-
-     additionLength = (length1, length2) => length1 + length2;
-    
+     centimenterToInchConverter = (length) => {
+          let result = Math.ceil(length / 2.54);
+          return result
+     }
+     
+     additionLength = (length1, length2) => {
+          let result = length1 + length2;
+          return result
+     }
 }
-module.exports = new LengthFacotry;
+module.exports =  new LengthFacotry;
